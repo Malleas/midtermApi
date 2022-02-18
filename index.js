@@ -26,7 +26,7 @@ app.post('/calc', (_req, res) => {
             res.status(200).json({Results: results})
             break;
         case '/' :
-            if(num1 || num2 === 0){
+            if(num1 === 0 || num2 === 0){
                 res.status(200).json({error: "Can not divide by 0"})
             }else {
                 results = num1 / num2
